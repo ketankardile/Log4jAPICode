@@ -40,10 +40,7 @@ public class LoginTest {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		driver.get("https://www.freecrm.com/");
-		log.info("entering application URL");
-		log.warn("Hey this just a warning message");
-		log.fatal("hey this is just fatal error message");
-		log.debug("this is debug message");
+
 	}
 	
 	
