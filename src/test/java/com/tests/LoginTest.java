@@ -29,11 +29,11 @@ public class LoginTest {
 	
 	@BeforeMethod
 	public void setup(){
-		log.info("****************************** Starting test cases execution  *****************************************");
+	log.info("****************************** Starting test cases execution  *****************************************");
 
-		System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
+		System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\chromedriver_win32\\chromedriver.exe");	
 		driver = new ChromeDriver(); 
-		log.info("launching chrome broswer");
+		//log.info("launching chrome broswer");
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -51,26 +51,13 @@ public class LoginTest {
 		String title = driver.getTitle();
 		System.out.println(title);
 		log.info("login page title is--->"+title);
-		Assert.assertEquals(title,"#1 Free CRM for Any Business: Online Customer Relationship Software");
-		
+		Assert.assertEquals(title,"#1 Free CRM customer relationship management software cloud");
+	
 		log.info("****************************** ending test case *****************************************");
 		log.info("****************************** freeCrmTitleTest *****************************************");
 
 	}
-	
-	@Test(priority=2)
-	public void freemCRMLogoTest(){
-		log.info("****************************** starting test case *****************************************");
-		log.info("****************************** freemCRMLogoTest *****************************************");
 
-		boolean b = driver.findElement(By.xpath("//img[@class='img-responsive']")).isDisplayed();
-		Assert.assertTrue(b);
-		
-		log.info("****************************** ending test case *****************************************");
-		log.info("****************************** freemCRMLogoTest *****************************************");
-
-	}
-	
 	
 
 	@AfterMethod
